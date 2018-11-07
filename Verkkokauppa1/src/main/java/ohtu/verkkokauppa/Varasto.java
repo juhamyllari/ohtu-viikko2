@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Varasto implements Warehouse {
 
-    private Kirjanpito kirjanpito;
+    private Bookkeeping kirjanpito;
     private HashMap<Tuote, Integer> saldot;  
     
-    public Varasto() {
-        kirjanpito = Kirjanpito.getInstance();
+    public Varasto(Bookkeeping bookkeeping) {
+        kirjanpito = bookkeeping;
         saldot = new HashMap<Tuote, Integer>();
         alustaTuotteet();
     }

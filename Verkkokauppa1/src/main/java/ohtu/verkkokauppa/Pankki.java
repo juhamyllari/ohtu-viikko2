@@ -1,11 +1,13 @@
 package ohtu.verkkokauppa;
 
+import java.util.ArrayList;
+
 public class Pankki implements Bank {
 
-    private Kirjanpito kirjanpito;
+    private Bookkeeping kirjanpito;
 
-    public Pankki() {
-        kirjanpito = Kirjanpito.getInstance();
+    public Pankki(Bookkeeping bookkeeping) {
+        kirjanpito = bookkeeping;
     }
 
     @Override
@@ -15,5 +17,9 @@ public class Pankki implements Bank {
 
         // täällä olisi koodi joka ottaa yhteyden pankin verkkorajapintaan
         return true;
+    }
+    
+    public ArrayList<String> getTapahtumat() {
+        return kirjanpito.getTapahtumat();
     }
 }
