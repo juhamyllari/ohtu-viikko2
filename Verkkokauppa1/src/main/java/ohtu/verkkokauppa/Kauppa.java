@@ -8,13 +8,6 @@ public class Kauppa {
     private ReferenceGenerator viitegeneraattori;
     private String kaupanTili;
 
-    public Kauppa() {
-        varasto = Varasto.getInstance();
-        pankki = Pankki.getInstance();
-        viitegeneraattori = Viitegeneraattori.getInstance();
-        kaupanTili = "33333-44455";
-    }
-    
     public Kauppa(Warehouse warehouse, Bank bank, ReferenceGenerator refGen) {
         varasto = warehouse;
         pankki = bank;
