@@ -1,7 +1,10 @@
 package ohtu.verkkokauppa;
 
 import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Kauppa {
 
     private Warehouse varasto;
@@ -10,6 +13,7 @@ public class Kauppa {
     private ReferenceGenerator viitegeneraattori;
     private String kaupanTili;
 
+    @Autowired
     public Kauppa(Warehouse warehouse, Bank bank, ReferenceGenerator refGen) {
         varasto = warehouse;
         pankki = bank;
